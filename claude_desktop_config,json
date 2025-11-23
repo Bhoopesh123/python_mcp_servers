@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "Demo to add two numbers": {
+      "command": "uv",
+      "args": [
+         "run",
+         "--with",
+         "mcp[cli]",
+         "mcp",
+         "run",
+         "C:\\Users\\Public\\github\\mcp-server-demo\\main.py"
+        ]
+    }
+  }
+}

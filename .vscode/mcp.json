@@ -1,0 +1,15 @@
+{
+  "servers": {
+    "Add Two Numbers via MCP": {
+      "command": "uv",
+      "args": [
+         "run",
+         "--with",
+         "mcp[cli]",
+         "mcp",
+         "run",
+         "C:\\Users\\Public\\github\\python_mcp_servers\\main.py"
+        ]
+     }
+    }
+  }

@@ -29,6 +29,7 @@ Create main.py and add the code present in it.
 
     Add the claude_desktop_config,json in Claude desktop
 
+count({__name__=~".+"}) by (job)
 
 
 

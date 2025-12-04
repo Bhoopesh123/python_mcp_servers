@@ -6,10 +6,10 @@ mcp = FastMCP(
     name="PrometheusMetricsReader"
 )
 
-PROM_URL = "http://localhost:9090/metrics"
+PROM_URL = "http://prometheus:9090/metrics"
 
 # Grafana settings
-GRAFANA_URL = "http://localhost:3000"
+GRAFANA_URL = "http://grafana:3000"
 GRAFANA_API_KEY = "glsa_zEm32fiuZZREY21hUA9NW8iBgtUmPF8b_2cb1caef"
 
 # ======================================================================
@@ -220,22 +220,6 @@ def trigger_n8n_get(webhook_url: str) -> str:
         trigger_n8n_get("http://localhost:5678/webhook/21f849fe-cb04-4b69-ac47-22fd0cbb9037")
     """
 
-    try:
-        resp = requests.get(webhook_url, timeout=5)
-        return f"n8n GET Response ({resp.status_code}): {resp.text}"
-    except Exception as e:
-        return f"Error calling n8n GET webhook: {str(e)}"
-
-@mcp.tool()
-def trigger_n8n_process(webhook_url: str) -> str:
-    """
-    Trigger an n8n workflow using GET webhook.
-    
-    Example:
-        trigger_n8n_get("http://localhost:5678/webhook/73b9e9ff-fe45-467f-8fdd-8218008f5658")
-    """
-
-    webhook_url = "http://localhost:5678/webhook/73b9e9ff-fe45-467f-8fdd-8218008f5658"
     try:
         resp = requests.get(webhook_url, timeout=5)
         return f"n8n GET Response ({resp.status_code}): {resp.text}"

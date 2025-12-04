@@ -31,5 +31,9 @@ Create main.py and add the code present in it.
 
 count({__name__=~".+"}) by (job)
 
+mkdir n8n-docker
+cd n8n-docker
+
+docker run -d --name n8n -p 5678:5678 n8nio/n8n
 
 

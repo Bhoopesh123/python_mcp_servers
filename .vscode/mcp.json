@@ -1,6 +1,6 @@
 {
   "servers": {
-    "Add Two Numbers via MCP": {
+    "Your Own Grafana and Prometheus MCP Server": {
       "command": "uv",
       "args": [
          "run",

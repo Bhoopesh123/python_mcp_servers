@@ -1,0 +1,11 @@
+    python3 -m venv /mnt/c/users/public/github/openlit_demo
+    source /mnt/c/Users/Public/github/openlit_demo/bin/activate
+  	python3 -m pip install openlit openai anthropic cohere
+    python3 -m pip install google-generativeai
+
+
+export OTEL_SERVICE_NAME=gemini_app_4
+export OTEL_DEPLOYMENT_ENVIRONMENT=production
+export OTEL_EXPORTER_OTLP_ENDPOINT="https://otlp-gateway-prod-us-east-0.grafana.net/otlp"
+export OTEL_EXPORTER_OTLP_HEADERS="xxx"
+python3 gemini_code.py
